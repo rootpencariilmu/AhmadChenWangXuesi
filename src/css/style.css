@@ -1,0 +1,464 @@
+/* ////////////////////////////////////////////
+            Google font import
+   ////////////////////////////////////////////*/
+
+/* main font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
+/* terminal / code looking font */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+/* handwritten font */
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+/* ////////////////////////////////////////////
+                Default styling
+   ////////////////////////////////////////////*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: rgb(0,8,17);
+    background: -moz-linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000811",endColorstr="#002142",GradientType=1); 
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+.container {
+    width: 75vw;
+    margin: auto;
+}
+
+code {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.top {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    transition: padding 0.3s ease;
+}
+
+.top.sticky {
+    background: linear-gradient(rgba(13,17,23,1) 15%, rgba(13,17,23,0) 100%);
+}
+
+/* ////////////////////////////////////////////
+                placeholder styling
+   ////////////////////////////////////////////*/
+
+::placeholder {
+    color: #fff;
+    opacity: 100;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #fff;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+}
+
+/* ////////////////////////////////////////////
+                scrollbar styling
+   ////////////////////////////////////////////*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* ////////////////////////////////////////////
+                cursor styling
+   ////////////////////////////////////////////*/
+
+.cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    transition-property: background, transform;
+    transform-origin: 100% 100%;
+}
+
+.link-hover {
+    transform: scale(1.5);
+    background-color: #fff;
+}
+
+/* ////////////////////////////////////////////
+            Splash screen styling
+   ////////////////////////////////////////////*/
+
+.splash {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0,8,17);
+    background: -moz-linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: linear-gradient(125deg, rgba(0,8,17,1) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000811",endColorstr="#002142",GradientType=1);
+    z-index: 2;
+    cursor: none;   
+}
+
+.splash-logo {
+    width: 250px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+
+/* ////////////////////////////////////////////
+                selection styling
+   ////////////////////////////////////////////*/
+
+::selection {
+    background-color: #161B22;
+    color: #fff;
+}
+
+/* ////////////////////////////////////////////
+            social icons styling
+   ////////////////////////////////////////////*/
+
+.icon-bar {
+    position: fixed;
+    left: 75px;
+    bottom: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.github, .instagram, .mail, .status {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    stroke: #fff;
+}
+
+.socialItem:hover {
+    stroke: #0d1117;
+}
+
+/* ////////////////////////////////////////////
+                scroll styling
+   ////////////////////////////////////////////*/
+
+.scroll-bar {
+    position: fixed;
+    right: 25px;
+    bottom: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.scrollitem {
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    /* background-color: #fff; */
+    border: 3px solid #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.active {
+    background-color: #fff;
+}
+
+/* ////////////////////////////////////////////
+                home page styling
+   ////////////////////////////////////////////*/
+
+.home {
+    height: 100vh;
+}
+
+.intro-text {
+    font-size: 72px;
+    font-weight: 800;
+    position: absolute;
+    top: 35%;
+}
+
+/* outlined text */
+
+.intro-text .outlined-text {
+    color: transparent;
+    -webkit-text-stroke: 2.5px #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.bottom-div {
+    position: absolute;
+    bottom: 0px;
+    height: 80px;
+    left: 50vw;
+}
+
+/* mouse-scroll */
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2.5px solid #fff;
+    border-radius: 25px;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+}
+
+.handwritten_text {
+    font-family: 'Kalam', cursive;
+    fill: #fff;
+}
+
+.handwritten {
+    position: absolute;
+    bottom: 80px;
+    right: 33%;
+}
+
+/* ////////////////////////////////////////////
+                project page styling
+   ////////////////////////////////////////////*/
+
+.projects {
+    height: 100vh;
+}
+
+.column_left {
+    float: left;
+    width: 120px;
+    padding: 5px;
+}
+
+.column_right {
+    float: right;
+    width: 120px;
+    padding: 5px;
+}
+
+.project_title {
+    font-size: 30px;
+}
+
+.project_paragraph {
+    font-weight: 100;
+}
+
+.project_link {
+    margin-top: 20px;
+}
+
+.project_link a {
+    text-decoration: none;
+    color: #161B22;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 5px 8px 5px 8px;
+    font-weight: 700;
+}
+
+/* ////////////////////////////////////////////
+            skills & tools page styling
+   ////////////////////////////////////////////*/
+
+.skillstools {
+    height: 100vh;
+}
+
+.column {
+    float: left;
+    width: 120px;
+    padding: 5px;
+}
+
+.row {
+    background: rgb(0,8,17);
+    background: -moz-linear-gradient(125deg, rgba(0,8,17,0) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(0,8,17,0) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    background: linear-gradient(125deg, rgba(0,8,17,0) 0%, rgba(0,16,32,1) 70%, rgba(0,33,66,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000811",endColorstr="#002142",GradientType=1);
+    padding: 65px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.center {
+    width: 40vw;
+    margin: auto;
+}
+
+.type {
+    text-align: center;
+    background-color: transparent;
+}
+
+/* ////////////////////////////////////////////
+                page styling
+   ////////////////////////////////////////////*/
+
+
+.header {
+    font-size: 72px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.link {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.link:hover {
+    text-decoration: none;
+}
+
+/* ////////////////////////////////////////////
+                    keyframes
+   ////////////////////////////////////////////*/
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes spin { 
+    100% { 
+        -moz-transform: rotate(360deg); 
+    } 
+}
+
+@-webkit-keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+    } 
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+/* ////////////////////////////////////////////
+                media queries
+   ////////////////////////////////////////////*/
+
+@media only screen and (max-width:480px) {
+    .container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:768px) {
+
+}
+
+@media only screen and (max-width:1200px) {
+
+}
+
+
+
+
+
+
+/* @import 'https://fonts.googleapis.com/css?family=Roboto';
+html, body {
+	background-color: #000;
+}
+h2, a, p {
+	color: #fff;
+	font-family: Roboto;
+	text-decoration: none;
+}
+p>a {
+	color: #fd084a;
+} */
+.blink {
+  animation: blink 0.5s infinite;
+}
+@keyframes blink{
+  to { opacity: .0; }
+}
+/* .flex {
+	display: flex;
+}
+.header-sub-title {
+  color: #fff;
+  font-family: "Courier";
+  font-size: 20px;
+  padding: 0.1em;
+} */
