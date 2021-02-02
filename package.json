@@ -1,0 +1,51 @@
+{
+  "name": "AhmadChenWangXuesi",
+  "version": "1.0.0",
+  "description": "AhmadChenWangXuesi",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rootpencariilmu/AhmadChenWangXuesi.git"
+  },
+  "keywords": [
+    "web",
+    "developer",
+    "designer",
+    "web",
+    "designer",
+    "developer",
+    "programmer",
+    "coder",
+    "html",
+    "css3",
+    "css",
+    "javascript",
+    "js",
+    "scss",
+    "nodejs",
+    "mongodb",
+    "github",
+    "git",
+    "vscode",
+    "visual",
+    "studio",
+    "code",
+    "tap",
+    "giftit",
+    "martijn",
+    "Martijn",
+    "faber",
+    "frontend"
+  ],
+  "author": {
+    "name": "AhmadChenWangXuesi",
+    "url": "http://github.com/ahmadchen"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rootpencariilmu/AhmadChenWangXuesi/issues"
+  },
+  "homepage": "https://rootpencariilmu.github.io/AhmadChenWangXuesi/"
+}
